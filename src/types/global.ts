@@ -8,7 +8,7 @@ type ZoomLevelTuple = typeof allZoomLevel;
 
 export type ZoomLevel = ZoomLevelTuple[number];
 
-export type LangCodes = "en" | "pl" | "de" | "lt" | "fr";
+export type LangCodes = "en" | "pl" | "de" | "lt" | "fr" | "it";
 
 export type Config = {
   zoom: ZoomLevel;
@@ -20,7 +20,7 @@ export type Config = {
    */
   filterButtonState?: number;
   /**
-   * Language code: "en" | "pl" | "de" | "lt" | "fr"
+   * Language code: "en" | "pl" | "de" | "lt" | "fr" | "it"
    */
   lang?: LangCodes | string;
   isFiltersButtonVisible?: boolean;
