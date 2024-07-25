@@ -2,7 +2,7 @@ import { FC, useState } from "react";
 import { useLanguage } from "@/context/LocaleProvider";
 import Icon from "../Icon";
 import PaginationButton from "../PaginationButton/PaginationButton";
-import { StyledInput, StyledInputWrapper, StyledLeftColumnHeader, StyledWrapper } from "./styles";
+import { StyledLeftColumnHeader, StyledWrapper } from "./styles";
 import { LeftColumnProps } from "./types";
 import LeftColumnItem from "./LeftColumnItem/LeftColumnItem";
 
@@ -25,24 +25,7 @@ const LeftColumn: FC<LeftColumnProps> = ({
   return (
     <StyledWrapper>
       <StyledLeftColumnHeader>
-        <StyledInputWrapper isFocused={isInputFocused}>
-          <StyledInput
-            placeholder={search}
-            value={searchInputValue}
-            onChange={onSearchInputChange}
-            onFocus={toggleFocus}
-            onBlur={toggleFocus}
-          />
-          <Icon iconName="search" />
-        </StyledInputWrapper>
-        <PaginationButton
-          intent="previous"
-          isVisible={pageNum !== 0}
-          onClick={onLoadPrevious}
-          icon={<Icon iconName="arrowUp" width="16" height="16" />}
-          pageNum={pageNum}
-          pagesAmount={pagesAmount}
-        />
+        <p className="flex items-center justify-center w-full">Nama Kendaraan</p>
       </StyledLeftColumnHeader>
       {data.map((item, index) => (
         <LeftColumnItem

@@ -14,14 +14,11 @@ export const StyledWrapper = styled.div`
 `;
 
 export const StyledLeftColumnHeader = styled.div`
-  padding-bottom: 4px;
   position: sticky;
-  top: 0;
-  height: 124px;
+  align-items: center;
+  height: 80px;
   display: flex;
-  flex-direction: column;
-  justify-content: end;
-  width: ${leftColumnWidth}px;
+  width: 100%;
   background-color: ${({ theme }) => theme.colors.white};
   z-index: 3;
 `;
