@@ -28,10 +28,10 @@ const Tile: FC<TileProps> = ({ row, data, zoom, onTileClick }) => {
   return (
     <StyledTileWrapper
       style={{
-        left: `${x}px`,
+        left: `${x + 4}px`,
         top: `${y}px`,
         backgroundColor: `${data.bgColor ?? tileDefaultBgColor}`,
-        width: `${width}px`,
+        width: `${width - 8}px`,
         color: getTileTextColor(data.bgColor ?? "")
       }}
       onClick={() => onTileClick?.(data)}>
