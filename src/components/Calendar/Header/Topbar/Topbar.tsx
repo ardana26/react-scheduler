@@ -31,23 +31,6 @@ const Topbar: FC<TopbarProps> = ({ width }) => {
 
   return (
     <Wrapper width={width}>
-      <Filters>
-        {filterButtonState >= 0 && (
-          <IconButton
-            variant={filterButtonState ? "filled" : "outlined"}
-            iconName="filter"
-            width="16"
-            height="16"
-            onClick={handleFilterData}>
-            {topbar.filters}
-            {!!filterButtonState && (
-              <span onClick={handleClearFilters}>
-                <Icon iconName="close" height="16" width="16" />
-              </span>
-            )}
-          </IconButton>
-        )}
-      </Filters>
       <NavigationWrapper>
         <NavBtn disabled={!data?.length} onClick={handleGoPrev}>
           <Icon iconName="arrowLeft" height="15" fill="#3B3C5F" />
