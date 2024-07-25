@@ -19,7 +19,8 @@ const Scheduler = ({
   onFilterData,
   onClearFilterData,
   onItemClick,
-  isLoading
+  isLoading,
+  columns
 }: SchedulerProps) => {
   const appConfig: Config = useMemo(
     () => ({
@@ -73,6 +74,7 @@ const Scheduler = ({
                   onTileClick={onTileClick}
                   topBarWidth={topBarWidth ?? 0}
                   onItemClick={onItemClick}
+                  columns={columns}
                 />
               </StyledInnerWrapper>
             </StyledOutsideWrapper>

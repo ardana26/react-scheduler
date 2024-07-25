@@ -5,6 +5,7 @@ export type CalendarProps = {
   topBarWidth: number;
   onTileClick?: (data: SchedulerProjectData) => void;
   onItemClick?: (data: SchedulerItemClickData) => void;
+  columns?: string[];
 };
 
 export type StyledSpanProps = {

@@ -15,7 +15,8 @@ const LeftColumn: FC<LeftColumnProps> = ({
   pagesAmount,
   searchInputValue,
   onSearchInputChange,
-  onItemClick
+  onItemClick,
+  columns = ["name"]
 }) => {
   const [isInputFocused, setIsInputFocused] = useState(false);
   const { search } = useLanguage();
@@ -25,7 +26,7 @@ const LeftColumn: FC<LeftColumnProps> = ({
   return (
     <StyledWrapper>
       <StyledLeftColumnHeader>
-        <p className="flex items-center justify-center w-full">Nama Kendaraan</p>
+        <p className="flex items-center justify-center w-full">{columns[0]}</p>
       </StyledLeftColumnHeader>
       {data.map((item, index) => (
         <LeftColumnItem

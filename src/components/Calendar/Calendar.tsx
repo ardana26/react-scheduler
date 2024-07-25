@@ -20,7 +20,13 @@ const initialTooltipData: TooltipData = {
   }
 };
 
-export const Calendar: FC<CalendarProps> = ({ data, onTileClick, onItemClick, topBarWidth }) => {
+export const Calendar: FC<CalendarProps> = ({
+  data,
+  onTileClick,
+  onItemClick,
+  topBarWidth,
+  columns
+}) => {
   const [tooltipData, setTooltipData] = useState<TooltipData>(initialTooltipData);
   const [filteredData, setFilteredData] = useState(data);
   const [isVisible, setIsVisible] = useState(false);
@@ -132,6 +138,7 @@ export const Calendar: FC<CalendarProps> = ({ data, onTileClick, onItemClick, to
         searchInputValue={searchPhrase}
         onSearchInputChange={handleSearch}
         onItemClick={onItemClick}
+        columns={columns}
       />
       <StyledInnerWrapper>
         <Header zoom={zoom} topBarWidth={topBarWidth} />
