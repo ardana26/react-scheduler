@@ -10,7 +10,7 @@ export const StyledWrapper = styled.div<StyledLeftColumnItemWrapperProps>`
   width: 100%;
   min-height: ${boxHeight}px;
   height: calc(${boxHeight}px * ${({ rows }) => rows});
-  border-top: 1px solid ${({ theme }) => theme.colors.grey400};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.grey400};
   transition: 0.5s ease;
   cursor: ${({ clickable }) => (clickable ? "pointer" : "auto")};
   &:hover {

@@ -14,6 +14,8 @@ export const StyledWrapper = styled.div`
 `;
 
 export const StyledLeftColumnHeader = styled.div`
+  top: 0;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.grey400};
   position: sticky;
   align-items: center;
   height: 80px;
