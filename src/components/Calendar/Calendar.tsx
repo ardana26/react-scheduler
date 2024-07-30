@@ -128,18 +128,23 @@ export const Calendar: FC<CalendarProps> = ({
 
   return (
     <StyledOuterWrapper>
-      <LeftColumn
-        data={page}
-        pageNum={currentPageNum}
-        pagesAmount={pagesAmount}
-        rows={rowsPerItem}
-        onLoadNext={next}
-        onLoadPrevious={previous}
-        searchInputValue={searchPhrase}
-        onSearchInputChange={handleSearch}
-        onItemClick={onItemClick}
-        columns={columns}
-      />
+      <div className="left-0 sticky flex flex-row w-full z-10 shadow-[0px_4px_15px_rgba(39,55,75,0.16)]">
+        {columns?.map((column, index) => (
+          <LeftColumn
+            key={column + index}
+            data={page}
+            pageNum={currentPageNum}
+            pagesAmount={pagesAmount}
+            rows={rowsPerItem}
+            onLoadNext={next}
+            onLoadPrevious={previous}
+            searchInputValue={searchPhrase}
+            onSearchInputChange={handleSearch}
+            onItemClick={onItemClick}
+            column={column}
+          />
+        ))}
+      </div>
       <StyledInnerWrapper>
         <Header zoom={zoom} topBarWidth={topBarWidth} />
         {data.length ? (

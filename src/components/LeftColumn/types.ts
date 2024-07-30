@@ -10,7 +10,7 @@ export type LeftColumnProps = {
   searchInputValue: string;
   onSearchInputChange: React.ChangeEventHandler<HTMLInputElement>;
   onItemClick?: (data: SchedulerItemClickData) => void;
-  columns?: string[];
+  column?: string;
 };
 
 export type StyledInputWrapperProps = {

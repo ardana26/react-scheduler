@@ -16,7 +16,7 @@ const LeftColumn: FC<LeftColumnProps> = ({
   searchInputValue,
   onSearchInputChange,
   onItemClick,
-  columns = ["name"]
+  column = "Schedule"
 }) => {
   const [isInputFocused, setIsInputFocused] = useState(false);
   const { search } = useLanguage();
@@ -26,7 +26,7 @@ const LeftColumn: FC<LeftColumnProps> = ({
   return (
     <StyledWrapper>
       <StyledLeftColumnHeader>
-        <p className="flex items-center justify-center w-full">{columns[0]}</p>
+        <p className="flex items-center justify-center w-full">{column}</p>
       </StyledLeftColumnHeader>
       {data.map((item, index) => (
         <LeftColumnItem
